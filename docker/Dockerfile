@@ -1,17 +1,12 @@
-# Image python
-FROM python:3.10-slim
+# docker/Dockerfile
 
-# Le dossier de travail dans le conteneur
+FROM python:3.11-slim
+
 WORKDIR /app
 
-# Copier des dépendances
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Installation des dépendances
-RUN pip install --upgrade pip && pip install -r requirements.txt
-
-# Copier tout le code source dans le conteneur
 COPY . .
 
-# La commande de démarage de l'application 
-CMD ["pytest", "tests/"]
+CMD sh -c "python notebooks/migration_pipeline.py && pytest notebooks/test_integrity.py"

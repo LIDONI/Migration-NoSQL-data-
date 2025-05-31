@@ -1,0 +1,27 @@
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: medical_db
+
+  migration:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./notebooks:/app/notebooks
+    command: sh -c "python notebooks/migration_pipeline.py && pytest notebooks/test_integrity.py"
+
+volumes:
+  mongo_data:
+
