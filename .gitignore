@@ -1,8 +1,0 @@
-# Ignorer le fichier .env
-.env
-
-# Ignorer le dossier venv
-venv/
-
-# Ignorer tous les fichiers .csv dans le dossier data/
-data/*.csv
