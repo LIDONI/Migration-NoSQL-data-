@@ -1,0 +1,15 @@
+# Environnement virtuel
+venv/
+
+# Variables d'environnement
+.env
+
+# Fichiers de données
+data/
+
+# Checkpoints Jupyter
+**/.ipynb_checkpoints
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
