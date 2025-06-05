@@ -38,7 +38,7 @@ Ce projet vise à :
 ##  Structure du projet
 
  **Eléments principaux de l'architecture du projet**
-
+![Structure_projet](images/Image_pres.png)
 1- Sources de données
 
 - Fichiers CSV (patients.csv, healthcare_dataset.csv…)
