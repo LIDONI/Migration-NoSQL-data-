@@ -38,7 +38,7 @@ Ce projet vise à :
 ##  Structure du projet
 
  **Eléments principaux de l'architecture du projet**
- 
+
 ![Structure_projet](images/Image_pres.png)
 
 1- Sources de données
@@ -98,6 +98,7 @@ docker exec -it <nom_conteneur_api> bash
 
 `python notebooks/auth_app.py`
 
+![Fonctionnement](images/Structure_projet.png)
 
 ## Authentification
 
