@@ -137,6 +137,7 @@ volumes:
 
 ## Schéma BDD
 
+![Base de données](images/Untitled.png)
 
 ## Contrôle d’accès
 
